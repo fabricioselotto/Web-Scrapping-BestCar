@@ -5,7 +5,7 @@ import re
 from pymongo import MongoClient
 
 # DB connectivity
-client = MongoClient('localhost', 27017)
+client = MongoClient("mongodb+srv://bestcar:GB0Uni0SwlsWUT3k@bestcar.kgm2k.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority")
 db = client.BestCar
 collection_carros = db.carros
 
