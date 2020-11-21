@@ -1,0 +1,119 @@
+Categoria,Marca,Modelo
+Hatch,chevrolet,onix
+Hatch,volkswagen,gol
+Hatch,hyundai,hb20
+Hatch,ford,ka
+Hatch,renault,kwid
+Hatch,fiat,uno
+Hatch,fiat,mobi
+Hatch,volkswagen,up
+Hatch,volkswagen,fox
+Hatch,fiat,argo
+Hatch,volkswagen,polo
+Hatch,toyota,etios-hatch
+Hatch,peugeot,208
+Hatch,nissan,march
+Hatch,chevrolet,joy
+Hatch,chery,qq
+Hatch,ford,new-fiesta-hatch
+Hatch,citroen,c3
+Sedan Compacto,chevrolet,prisma
+Sedan Compacto,volkswagen,voyage
+Sedan Compacto,honda,city
+Sedan Compacto,hyundai,hb20s
+Sedan Compacto,renault,logan
+Sedan Compacto,chevrolet,cobalt
+Sedan Compacto,nissan,versa
+Sedan Compacto,ford,ka-sedan
+Sedan Compacto,chevrolet,onix-plus
+Sedan Compacto,toyota,etios-sedan
+Sedan Compacto,volkswagen,virtus
+Sedan Compacto,fiat,cronos
+Sedan Compacto,ford,new-fiesta-sedan
+Sedan Compacto,toyota,yaris-sedan
+Sedan M�dio,toyota,corolla
+Sedan M�dio,honda,civic
+Sedan M�dio,chevrolet,cruze
+Sedan M�dio,volkswagen,jetta
+Sedan M�dio,nissan,sentra
+Sedan M�dio,renault,fluence
+Sedan M�dio,ford,focus-sedan
+Sedan M�dio,kia,cerato
+Sedan M�dio,citroen,c4-lounge
+Sedan M�dio,hyundai,elantra
+Sedan M�dio,mitsubishi,lancer
+Sedan M�dio,audi,a3-sedan
+Sedan M�dio,peugeot,408
+Sedan Luxo,ford,fusion
+Sedan Luxo,mercedes-benz,classe-c
+Sedan Luxo,bmw,serie-3
+Sedan Luxo,audi,a4
+Sedan Luxo,mercedes-benz,classe-cla
+Sedan Luxo,honda,accord
+Sedan Luxo,bmw,serie-5
+Sedan Luxo,audi,a5
+Sedan Luxo,toyota,camry
+Sedan Luxo,jaguar,xf
+Picape Compacta,volkswagen,saveiro
+Picape Compacta,chevrolet,montana
+Picape Compacta,fiat,strada
+Picape,chevrolet,s10-cabine-dupla
+Picape,fiat,toro
+Picape,toyota,hilux-cabine-dupla
+Picape,ford,ranger-cabine-dupla
+Picape,renault,duster-oroch
+Picape,mitsubishi,l200-triton
+Picape,volkswagen,amarok
+Picape,nissan,frontier
+Picape,chevrolet,s10-cabine-simples
+Picape,toyota,hilux-cabine-simples
+Suv,ford,ecosport
+Suv,renault,duster
+Suv,jeep,renegade
+Suv,honda,hr-v
+Suv,hyundai,creta
+Suv,nissan,kicks
+Suv,chevrolet,tracker
+Suv,volkswagen,t-cross
+Suv,peugeot,2008
+Suv,mitsubishi,asx
+Suv,citroen,c4-cactus
+Suv,caoa-chery,tiggo-5x
+Suv,renault,captur
+Suv Premium,honda,cr-v
+Suv Premium,kia,sportage
+Suv Premium,mitsubishi,outlander
+Suv Premium,hyundai,tucson
+Suv Premium,jeep,compass
+Suv Premium,toyota,sw4
+Suv Premium,volkswagen,tiguan
+Suv Premium,bmw,x1
+Suv Premium,kia,sorento
+Suv Premium,audi,q3
+Suv Premium,volvo,xc60
+Suv Premium,mercedes-benz,classe-gla
+Suv Premium,mitsubishi,pajero-full
+Suv Luxo,land-rover,range-rover-evoque
+Suv Luxo,jeep,grand-cherokee
+Suv Luxo,bmw,x3
+Suv Luxo,bmw,x6
+Suv Luxo,land-rover,discovery-sport
+Suv Luxo,land-rover,range-rover-sport
+Suv Luxo,porshe,cayenne
+Suv Luxo,audi,q5
+Monovolume,honda,fit
+Monovolume,kia,soul
+Monovolume,honda,wr-v
+Monovolume,mercedes-benz,classe-b
+Monovolume,citroen,aircross
+Monovolume,volkswagen,nivus
+Monovolume,bmw,serie-2
+Wagon,chevrolet,spin
+Wagon,fiat,doblo
+Van,fiat,fiorino
+Van,hyundai,hr
+Van,mercedes-benz,sprinter
+Van,renault,kangoo-express
+Van,peugeot,expert
+Van,peugeot,boxer
+Van,mercedes-benz,vito
