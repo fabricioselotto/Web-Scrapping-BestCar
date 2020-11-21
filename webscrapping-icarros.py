@@ -25,65 +25,70 @@ def lerCSV():
     return tabela
 CatMarMod = lerCSV()
 
-
+c = csv.writer(open('carros.csv', 'w'))
+c.writerow(['Categoria', 'Marca', 'Modelo', 'Ano', 'Preço', 'Nota Geral', 'Conforto/Acabamento', 'Consumo', 'Custo Benefício', 'Design', 'Dirigibilidade', 'Manutenção', 'Performance'])
 
 for i in range(len(CatMarMod)):
    try:
         categoria = CatMarMod.pop(0)
-        marca = CatMarMod.pop(0)
-        modelo = CatMarMod.pop(0)
+        print(categoria)
 
-        icarrosUrl = ('https://www.icarros.com.br/'+marca+'/'+modelo+'/2021/opiniao-do-dono') 
-            
-   except:
+        marcaLink = CatMarMod.pop(0)
+        modeloLink = CatMarMod.pop(0)
+
+        icarrosUrl = ('https://www.icarros.com.br/'+marcaLink+'/'+modeloLink+'/2021/opiniao-do-dono') 
+
+        icarrosPage.get(icarrosUrl)
+
+        marca = icarrosPage.find_element_by_xpath('/html/body/div[1]/div/div/div/div/div[2]/div[1]/h1/span[1]').text
+        print(marca)
+
+        modelo = icarrosPage.find_element_by_xpath('/html/body/div[1]/div/div/div/div/div[2]/div[1]/h1/span[2]').text
+        print(modelo)
+
+        ano = icarrosPage.find_element_by_xpath('/html/body/div[1]/div/div/div/div/div[2]/div[1]/h1/span[3]').text
+        print(ano)
+
+        valor = icarrosPage.find_element_by_xpath('/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/span').text
+        valor = float(re.sub('[^0-9]', '', valor))
+        print(valor)
+
+        pontuacaoTotal = icarrosPage.find_element_by_xpath('/html/body/div[1]/div/div/div/div/div[2]/section/div/span[1]').text
+        pontuacaoTotal = float(pontuacaoTotal.replace(',','.'))
+        print(pontuacaoTotal)
+
+        ptConfortoAcabamento = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[1]/div[1]').text
+        ptConfortoAcabamento = float(ptConfortoAcabamento.replace(',','.'))
+        print(ptConfortoAcabamento)
+
+        ptConsumo = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[2]/div[1]').text
+        ptConsumo = float(ptConsumo.replace(',','.'))
+        print(ptConsumo)
+
+        ptCustoBeneficio = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[3]/div[1]').text
+        ptCustoBeneficio = float(ptCustoBeneficio.replace(',','.'))
+        print(ptCustoBeneficio)
+
+        ptDesign = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[4]/div[1]').text
+        ptDesign = float(ptDesign.replace(',','.'))
+        print(ptDesign)
+
+        ptDirigibilidade = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[5]/div[1]').text
+        ptDirigibilidade = float(ptDirigibilidade.replace(',','.'))
+        print(ptDirigibilidade)
+
+        ptManutencao = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[6]/div[1]').text
+        ptManutencao = float(ptManutencao.replace(',','.'))
+        print(ptManutencao)
+
+        ptPerfomance = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div/div[1]/div[2]/div/section/div[2]/div/div[7]/div[1]').text
+        ptPerfomance = float(ptPerfomance.replace(',','.'))
+        print(ptPerfomance)
+
+        c.writerow([categoria, marca, modelo, ano, valor, pontuacaoTotal, ptConfortoAcabamento, ptConsumo, ptCustoBeneficio, ptDesign, ptDirigibilidade, ptManutencao, ptPerfomance])
+    
+    except:
        pass
 
-# icarrosUrl = ('https://www.icarros.com.br/'+marca+'/'+modelo+'/2021/opiniao-do-dono')
-icarrosPage.get("https://www.icarros.com.br/chevrolet/onix/2021/opiniao-do-dono")
+    
 
-
-categoria = ""
-marca = icarrosPage.find_element_by_xpath('/html/body/div[1]/div/div/div/div/div[2]/div[1]/h1/span[1]').text
-#print(marca)
-
-modelo = icarrosPage.find_element_by_xpath('/html/body/div[1]/div/div/div/div/div[2]/div[1]/h1/span[2]').text
-#print(modelo)
-
-ano = icarrosPage.find_element_by_xpath('/html/body/div[1]/div/div/div/div/div[2]/div[1]/h1/span[3]').text
-#print(ano)
-
-valor = icarrosPage.find_element_by_xpath('/html/body/div[1]/div/div/div/div/div[2]/div[1]/div[2]/span').text
-valor = int(re.sub('[^0-9]', '', valor))
-#print(valor)
-
-pontuacaoTotal = icarrosPage.find_element_by_xpath('/html/body/div[1]/div/div/div/div/div[2]/section/div/span[1]').text
-pontuacaoTotal = float(pontuacaoTotal.replace(',','.'))
-#print(pontuacaoTotal)
-
-ptConfortoAcabamento = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[1]/div[1]').text
-ptConfortoAcabamento = float(ptConfortoAcabamento.replace(',','.'))
-#print(ptConfortoAcabamento)
-
-ptConsumo = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[2]/div[1]').text
-ptConsumo = float(ptConsumo.replace(',','.'))
-#print(ptConsumo)
-
-ptCustoBeneficio = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[3]/div[1]').text
-ptCustoBeneficio = float(ptCustoBeneficio.replace(',','.'))
-#print(ptCustoBeneficio)
-
-ptDesign = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[4]/div[1]').text
-ptDesign = float(ptDesign.replace(',','.'))
-#print(ptDesign)
-
-ptDirigibilidade = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[5]/div[1]').text
-ptDirigibilidade = float(ptDirigibilidade.replace(',','.'))
-#print(ptDirigibilidade)
-
-ptManutencao = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[6]/div[1]').text
-ptManutencao = float(ptManutencao.replace(',','.'))
-#print(ptManutencao)
-
-ptPerfomance = icarrosPage.find_element_by_xpath('/html/body/div[3]/div/div[1]/div[1]/div[2]/div/section/div[2]/div/div[6]/div[1]').text
-ptPerfomance = float(ptPerfomance.replace(',','.'))
-#print(ptPerfomance)
