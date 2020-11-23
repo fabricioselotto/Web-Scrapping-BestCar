@@ -1,2 +1,1 @@
-web:gunicorn API:app
-heroku ps:scala web=1
+web gunicorn API:app
