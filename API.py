@@ -4,6 +4,7 @@
 from flask_cors import CORS, cross_origin
 from pymongo import MongoClient
 from flask import Flask, jsonify, request, escape
+import os
 
 app = Flask(__name__)
 cors = CORS(app)
