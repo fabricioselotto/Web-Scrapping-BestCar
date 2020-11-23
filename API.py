@@ -9,7 +9,7 @@ app = Flask(__name__)
 cors = CORS(app)
 
 # DB connectivity
-client = MongoClient("endereco")
+client = MongoClient("mongodb+srv://bestcar:test123@bestcar.kgm2k.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority")
 db = client.BestCar
 collection_carros = db.carros
 
