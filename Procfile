@@ -1,2 +1,2 @@
 web:gunicorn API:app
-heroku ps: escala web = 1
+heroku ps:scala web=1
